@@ -1,0 +1,241 @@
+/* Calendar Apps Style */
+.@{class-prefix}-rbc-calendar {
+  overflow: hidden;
+  padding-bottom: @gx-card-margin-base;
+  .flex-display(flex, column, nowrap);
+
+  @media screen and (max-width: @screen-xs-max) {
+    margin-bottom: @gx-card-margin-base-res;
+  }
+}
+
+.rbc-calendar {
+  .@{class-prefix}-rbc-calendar & {
+    .flex-display(flex, column, nowrap);
+    .flex(1);
+    height: 40rem;
+  }
+}
+
+.attendance-calendar .rbc-calendar {
+  height: 46rem !important;
+}
+
+.attendance-calendar .rbc-event-content {
+  white-space: nowrap;
+}
+
+.rbc-header {
+  padding: 12px;
+  color: #919191;
+  border-bottom: 1px solid #ebebeb;
+  font-weight: 500;
+}
+
+.rbc-date-cell {
+  color: #b6b4b4;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.rbc-today {
+  background-color: transparent;
+}
+
+.rbc-date-cell {
+  button {
+    padding: 5px;
+  }
+}
+.rbc-date-cell.rbc-now {
+  button {
+    background-color: #315ebf;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+  }
+}
+
+.rbc-off-range-bg {
+  background: #f5f7f9;
+}
+
+.rbc-btn-group {
+  button {
+    color: #919191;
+    font-size: 14px;
+    border: 1px solid #ebeb;
+  }
+}
+
+.rbc-toolbar-label {
+  color: #919191;
+}
+
+.rbc-month-view {
+  border-radius: 5px;
+  border: 1px solid #ebebeb;
+}
+
+.rbc-month-row + .rbc-month-row {
+  border-top: 1px solid #ebebeb;
+}
+.rbc-day-bg + .rbc-day-bg {
+  border-left: 1px solid #ebebeb;
+}
+
+.rbc-button-link {
+  margin-left: 17px;
+}
+
+.rbc-event {
+  color: #342d2d;
+  background-color: #4eb4de;
+  height: 17px;
+  margin-bottom: 0.3rem;
+  padding: 0px 3px;
+  text-align: left;
+}
+
+.rbc-overlay {
+  max-height: 300px;
+  overflow: auto;
+  z-index: 10;
+}
+
+.rbc-overlay::-webkit-scrollbar {
+  height: 4px;
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(100, 100, 100, 0.1);
+  -webkit-border-radius: 100px;
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+.rbc-overlay::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+.rbc-overlay::-webkit-scrollbar-thumb:horizontal {
+  /* This is the EXACT color of Mac OS scrollbars.
+     Yes, I pulled out digital color meter */
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 100px;
+}
+.rbc-overlay::-webkit-scrollbar-thumb:horizontal:active {
+  background: rgba(0, 0, 0, 0.61); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
+.rbc-overlay-header {
+  border-bottom: 1px solid #e5e5e5;
+  margin: -10px -10px 5px -10px;
+  padding: 2px 10px;
+  color: #000;
+}
+
+.rbc-show-more {
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 4;
+  font-weight: 500;
+  font-size: 85%;
+  height: auto;
+  line-height: normal;
+  color: rgb(161, 168, 176);
+}
+
+.rbc-event.rbc-selected {
+  background-color: @primary-7;
+}
+
+.rbc-slot-selection {
+  background-color: @primary-3;
+}
+
+.rbc-toolbar {
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+  color: @white-color;
+  background-image: none;
+  .box-shadow(none);
+  background-color: #6fc7ec;
+  border-color: #9ed4f3;
+}
+
+.rbc-toolbar button:active:hover,
+.rbc-toolbar button.rbc-active:hover,
+.rbc-toolbar button:active:focus,
+.rbc-toolbar button.rbc-active:focus,
+.rbc-toolbar button:focus,
+.rbc-toolbar button:hover {
+  color: @white-color;
+  background-color: @primary-4;
+  border-color: @primary-color;
+}
+
+.rbc-month-row {
+  min-height: 100px;
+}
+
+.rbc-btn-group {
+  & button {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1111px) {
+  .attendance-calendar .rbc-event-content {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .rbc-toolbar {
+    .flex-display(flex, column, nowrap);
+    .align-items(flex-start);
+  }
+
+  .rbc-toolbar .rbc-toolbar-label {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (max-width: 467px) {
+  .rbc-toolbar {
+    font-size: 12px;
+  }
+
+  .rbc-toolbar button {
+    padding: 5px 10px;
+  }
+}
+
+/* Calendar Components Style */
+.@{class-prefix}-com-calendar {
+  & .ant-fullcalendar-header {
+    & .ant-select {
+      margin-left: 8px;
+      margin-bottom: 8px;
+    }
+  }
+
+  @media screen and (max-width: 349px) {
+    margin: 0 -20px;
+  }
+}
+
+.@{class-prefix}-com-calendar-card {
+  border: @border-style-base @border-width-base @border-color;
+  max-width: 300px;
+  .border-radius(@border-radius-sm);
+
+  .@{class-prefix}-com-calendar {
+    @media screen and (max-width: 349px) {
+      margin: 0;
+    }
+  }
+}

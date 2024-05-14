@@ -1,0 +1,35 @@
+.select-without-label:focus-within ~ .floating-label,
+.select-without-label:not(:focus-within):valid ~ .floating-label
+{
+        top: -8px;
+        bottom: 10px;
+        left: 14px;
+        opacity: 1;
+        font-size: 11px;
+        background:#fff;
+        padding:0 5px;
+        height:14px;
+}
+
+.floating-label {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.5;
+    top: 9px;
+    left: 10px;
+    transition: 0.2s ease all !important;
+    visibility: visible !important;   
+}
+
+.floating-label-fixed {
+    position: absolute;
+    top: -7px;
+    bottom: 10px;
+    left: 14px;
+    opacity: 1;
+    font-size: 11px;
+    background:#fff;
+    padding:0 5px;
+    height:14px;
+}
+

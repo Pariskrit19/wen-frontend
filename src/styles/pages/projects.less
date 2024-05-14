@@ -1,0 +1,64 @@
+.project-name {
+  display: inline-block;
+  margin: 0 !important;
+}
+
+.project-name:hover {
+  color: @primary-color;
+  cursor: pointer;
+}
+
+.staging-urls {
+  display: inline-block;
+  padding: 3px;
+  padding-left: 5px;
+  margin-right: 4px;
+  padding-right: 0px;
+  word-break: break-all;
+}
+
+.overtime-approved {
+  color: #52c41a;
+}
+.overtime-rejected {
+  color: #ff4d4f;
+}
+
+.overtime-hour {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overtime-hour .ant-row {
+  margin-right: 0px;
+}
+
+.overtime-total-hour {
+  margin-left: 20px;
+}
+
+.overtime-total-hour .ant-form-item-control-input-content {
+  display: flex;
+}
+
+.worklog .ant-table-row-level-0:hover {
+  background: #f5fcfb;
+}
+
+.search-project-item {
+  margin: 0 17px 1rem 17px;
+  width: 200px;
+}
+
+@media only screen and(min-width:1200px) and (max-width: 1400px) {
+  .leave-card-margin {
+    margin-right: 10px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .search-project-item {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

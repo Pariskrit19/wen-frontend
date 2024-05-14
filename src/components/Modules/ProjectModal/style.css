@@ -1,0 +1,9 @@
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+
+.path-disabled{
+  background-color: rgb(235 235 235 / 75%) !important;
+}

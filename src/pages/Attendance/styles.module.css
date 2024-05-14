@@ -1,0 +1,28 @@
+.model_container {
+  width: 100%;
+  padding: 20px;
+}
+.rowDetail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.itemHeading {
+  font-weight: 600;
+  /* color: #545454; */
+  margin-bottom: 5px;
+}
+
+.gap {
+  height: 25px;
+}
+
+.note,
+.itemValue {
+  font-weight: 400;
+  /* color: #545454; */
+}

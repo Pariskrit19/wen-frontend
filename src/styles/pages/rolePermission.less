@@ -1,0 +1,53 @@
+.role-box {
+  // background-color: rgb(3 143 222 / 10%);
+  padding: 20px;
+  padding-bottom: 0px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.role-box-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.role-box-title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.role-content {
+  display: flex;
+  column-gap: 15px;
+  border: 2px solid #f0f0f0;
+}
+
+.role-left-container {
+  flex: 0.2;
+  border-right: 4px solid #f0f0f0;
+}
+
+.role-right-container {
+  flex: 1;
+}
+
+
+@media screen and (max-width:500px) {
+  .role-content{
+    flex-direction: column;
+  }
+
+  .role-left-container{
+    max-height: 250px;
+    overflow-y:auto;
+  }
+
+ .role-box-header .ant-form-item-row{
+  display: flex;
+    flex-direction: column;
+  }
+
+  .role-box-header .ant-form-item-label{
+    margin-right: 20px;
+  }
+}
